@@ -162,12 +162,12 @@ export default function Length({ navigation }) {
           </View>
           <View className="flex flex-row justify-center items-center gap-4 py-2">
             <View className="h-[1px] w-1/3 bg-orange-500"></View>
-            <Pressable
+            <TouchableOpacity
               onPress={() => swap()}
               className="bg-orange-500 rounded-full h-10 w-10 flex justify-center items-center"
             >
               <Ionicons name="swap-vertical" size={24} color="white" />
-            </Pressable>
+            </TouchableOpacity>
             <View className="h-[1px] w-1/3 bg-orange-500"></View>
           </View>
           <View className="px-5">
