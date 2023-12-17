@@ -1,6 +1,7 @@
 import { Text, Pressable, Animated } from "react-native";
 import { Entypo } from "@expo/vector-icons";
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { Fontisto } from '@expo/vector-icons';
 import { useRef, useState } from "react";
 import { useNav } from "../hooks/NavHook";
 
@@ -58,7 +59,7 @@ export default function Nav({ navigation }) {
           style={{
             transform: [{ translateX: slideAnim }],
           }}
-          className="w-[270px] z-50 h-screen bg-[#0F0F0F] absolute pt-20 pb-4 px-4"
+          className="w-[270px] z-50 h-screen bg-[#0F0F0F] absolute pt-4 pb-4 px-4"
         >
           <Pressable
             onPress={() => {
@@ -85,6 +86,32 @@ export default function Nav({ navigation }) {
           >
             <MaterialCommunityIcons name="tape-measure" size={24} color="white" />
             <Text className="text-2xl text-white ml-2">Length</Text>
+          </Pressable>
+          <Pressable
+            onPress={() => {
+              navigation.replace("Currency");
+              setSelected("Currency");
+              closeMenu();
+            }}
+            className={`px-2 py-2 rounded mb-2 flex flex-row items-center ${
+              selected === "Currency" ? "bg-[#424242]" : "bg-[#1E1E1E]"
+            }`}
+          >
+            <Fontisto name="money-symbol" size={24} color="white" />
+            <Text className="text-2xl text-white ml-2">Currency</Text>
+          </Pressable>
+          <Pressable
+            onPress={() => {
+              navigation.replace("Weight");
+              setSelected("Weight");
+              closeMenu();
+            }}
+            className={`px-2 py-2 rounded mb-2 flex flex-row items-center ${
+              selected === "Weight" ? "bg-[#424242]" : "bg-[#1E1E1E]"
+            }`}
+          >
+            <MaterialCommunityIcons name="weight" size={24} color="white" />
+            <Text className="text-2xl text-white ml-2">Weight</Text>
           </Pressable>
         </Animated.View>
       )}
