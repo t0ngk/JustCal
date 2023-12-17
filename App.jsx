@@ -5,7 +5,6 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Calculator from "./src/screens/Calculator";
 import { NavProvider } from "./src/hooks/NavHook";
 import Length from "./src/screens/Length";
-import DialogTest from "./src/screens/DialogTest";
 const Stack = createNativeStackNavigator();
 
 export default function App() {
@@ -21,7 +20,6 @@ export default function App() {
           >
             <Stack.Screen name="Calculator" component={Calculator} />
             <Stack.Screen name="Length" component={Length} />
-            <Stack.Screen name="DialogTest" component={DialogTest} />
           </Stack.Navigator>
         </NavigationContainer>
       </NavProvider>
