@@ -224,7 +224,7 @@ export default function Length({ navigation }) {
               <Text className="text-white text-4xl">0</Text>
             </TouchableOpacity>
             <TouchableOpacity onPress={() => handleInput("Del")} className="p-4 aspect-square bg-[#333333] rounded-full flex justify-center items-center">
-              <Text className="text-white text-3xl">Del</Text>
+              <Text className="text-white text-2xl">Del</Text>
             </TouchableOpacity>
           </View>
         </View>
