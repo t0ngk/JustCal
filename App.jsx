@@ -16,7 +16,7 @@ export default function App() {
             screenOptions={{
               headerShown: false,
             }}
-            initialRouteName="Length"
+            initialRouteName="Calculator"
           >
             <Stack.Screen name="Calculator" component={Calculator} />
             <Stack.Screen name="Length" component={Length} />
