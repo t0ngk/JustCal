@@ -89,8 +89,8 @@ export default function Length({ navigation }) {
     let firstValueToInches = covertToInches(firstValue, firstSelected);
     let secondValueToInches = covertInchesTo(firstValueToInches, secondSelected);
 
-    if (secondValueToInches.toString().length > 13) {
-      setSecondValue(secondValueToInches.toString().substring(0, 13));
+    if (secondValueToInches.toString().length > 12) {
+      setSecondValue(secondValueToInches.toString().substring(0, 12));
     } else {
       setSecondValue(secondValueToInches);
     }
@@ -98,7 +98,7 @@ export default function Length({ navigation }) {
   }, [firstValue, firstSelected, secondSelected]);
 
   const handleInput = (value) => {
-    if (firstValue.length > 12 && value !== "Del") {
+    if (firstValue.length > 10 && value !== "Del") {
       return;
     }
     if (value === "Del") {
